@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    
+    height: 100vh;
+    
+}
+section{
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: auto;
+    background-position: left;
+    background: url('https://w0.peakpx.com/wallpaper/548/199/HD-wallpaper-material-design-abstract-android-background-dark-design-material-minimalism-pattern.jpg');
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:60px calc(100vh - 60px);
+    object-fit: cover;
+}
+section .header{
+     background-color: rgba(144, 184, 243, 0.113);
+     backdrop-filter: blur(10px);
+     box-shadow: inset 0 -10px 8px 2px rgba(77, 76, 76, 0.247),0 0  50px 2px rgba(212, 234, 255, 0.384), 0 0  55px 2px rgba(239, 255, 59, 0.384);
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+     border-bottom: 1px solid rgb(102, 199, 255);
+    color: white;
+    z-index: 11111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+section .messageplay{
+    
+    display: grid;
+    grid-template-rows: calc(100vh - 120px) 1fr;
+    backdrop-filter: blur(10px);
+    background: url('https://w0.peakpx.com/wallpaper/548/199/HD-wallpaper-material-design-abstract-android-background-dark-design-material-minimalism-pattern.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+
+}
+section .messageplay .messageground{
+  
+   overflow: auto;
+   backdrop-filter: blur(0px);
+   position: relative;
+   display: grid;
+   grid-auto-flow: row;
+   padding: 10px;
+   grid-auto-rows: 80px;
+   gap: 10px;
+   align-items: center;
+   
+}
+section .messageplay .messageground .right,.left{
+    background:linear-gradient(mediumpurple,hotpink);
+    max-width: min-content;
+    height:max-content;
+    min-width: 150px;
+    padding: 5px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}
+section .messageplay .messageground .right{
+    background:linear-gradient(rgb(108, 56, 240),rgba(255, 77, 151, 0.101));
+    justify-self: end;
+    color: rgb(205, 204, 204);
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    
+}
+section .messageplay .messageground .alert{
+    background:rgba(25, 144, 249, 0.221);
+    padding: 10px;
+    transition: 0.3s ease;
+    text-align: center;
+    color: white;
+    scale: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-name: alertani;
+}
+@keyframes alertani {
+    100%{
+        scale: 1;
+    }
+}
+section .messageplay .messageground::-webkit-scrollbar{
+    width: 5px;
+}
+section .messageplay .messageground::-webkit-scrollbar-thumb{
+    width: 5px;
+    background:linear-gradient(rgb(45, 37, 61),hotpink);
+    border-radius: 10px;
+}
+section .messageplay .messageground::before{
+    content: "";
+    position:sticky;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.069);
+    transform: skew(-10deg) scale(1.7);
+    backdrop-filter: blur(20px);
+    border-right: groove 1px rgba(192, 192, 192, 0.123);
+    z-index: -1;
+
+}
+section #form{
+  border-top: 2px solid white;
+    display: flex;
+}
+section #form textarea{
+    background-color: rgba(46, 45, 45, 0.069);
+    width: 90%;
+resize: none;
+outline: none;
+font-family: 'Times New Roman', Times, serif;
+font-size: 18px;
+padding: 2px;
+border: none;
+backdrop-filter: blur(10px);
+color:white;
+
+}
+section #form textarea::-webkit-scrollbar{
+    display: none;
+
+}
+section #form button{
+    all:unset;
+    background:linear-gradient(purple,hotpink);
+    width: calc(100% - 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#username{
+    position: fixed;
+    z-index: 99999999999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0, 0, 128, 0.477);
+    transition: 0.6s ease;
+    backdrop-filter: blur(10px);
+    
+    
+}
+#username .loginbox{
+    display: flex;
+    width: 30%;
+    height: 65%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(gray,silver);
+    border-radius: 10px;
+    border: 1px groove white ;
+}
+#username .loginbox input{
+    border: 2px groove white ;
+    background-color: greenyellow;
+    color: seagreen;
+    padding: 20px;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+#username .loginbox .buttons{
+    padding: 5px;
+    width: 100%;
+    height: calc(100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(8,1fr);
+    gap:10px;
+}
+#username .loginbox .buttons span{
+    background-color: silver;
+    text-align: center;
+    box-shadow: 0  0 3px rgba(128, 128, 128, 0.161);
+    cursor: pointer;
+    text-transform: uppercase;
+    user-select: none;
+    border:2px groove silver;
+    color: rgb(40, 39, 39);
+    padding: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#username .loginbox .buttons span:hover{
+    background-color: rgba(192, 192, 192, 0.589);
+}
+#username .loginbox .buttons #enter{
+    background: red ;
+    grid-column: 1/-1;
+    grid-row: 7/-1;
+    justify-self: center;
+    align-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 10px 50px;
+}
+#username .loginbox input:valid ~ div #enter{
+    background-color: green;
+}
+@media screen and (max-width:600px) {
+    #username .loginbox{
+        display: flex;
+        width: 95%;
+        height: 75%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        background:linear-gradient(gray,silver);
+        border-radius: 10px;
+        border: 1px groove white ;
+    }
+}

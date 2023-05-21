@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConnectMe</title>
+    <link rel="stylesheet" href="./style.main.css">
+  </head>
+  <body>
+    <section>
+      <header class="header">
+        <h3 id="greet">Welcome Felix</h3>
+      </header>
+      <div class="messageplay">
+        <div class="messageground">
+          <!-- <div class="left">
+            
+          </div> -->
+          <!-- <div class="right">
+            
+          </div> -->
+        
+        </div>
+
+        <div id="form">
+          <textarea rows="1" id="sentbox" placeholder="Type message here..." /></textarea>
+          <button id="sendbtn">⚡</button>
+        </div>
+      </div>
+    </section>
+    <dialog open="open" id="username">
+      <div class="loginbox">
+
+        <input type="text" placeholder="Enter Your Name" id="userval" required>
+        <div class="buttons">
+          <span>A</span>
+          <span>b</span>
+          <span>c</span>
+          <span>d</span>
+          <span>e</span>
+          <span>f</span>
+          <span>g</span>
+          <span>h</span>
+          <span>i</span>
+          <span>j</span>
+          <span>k</span>
+          <span>l</span>
+          <span>m</span>
+          <span>n</span>
+          <span>o</span>
+          <span>p</span>
+          <span>q</span>
+          <span>r</span>
+          <span>s</span>
+          <span>t</span>
+          <span>u</span>
+          <span>v</span>
+          <span>w</span>
+          <span>x</span>
+          <span>y</span>
+          <span>z</span>
+          <span id="enter">ENTER</span>
+        </div>
+      </div>
+    </dialog>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="/index.js"></script>
+  </body>
+</html>
